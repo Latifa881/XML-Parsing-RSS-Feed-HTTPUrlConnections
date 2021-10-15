@@ -1,4 +1,4 @@
-package com.example.xmlparsingrssfeedhttpurlconnections.model.channel.item
+package com.example.xmlparsingrssfeedhttpurlconnections
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Path

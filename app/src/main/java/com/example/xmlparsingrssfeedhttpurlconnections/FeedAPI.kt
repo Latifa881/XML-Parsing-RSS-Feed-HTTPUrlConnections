@@ -1,6 +1,5 @@
 package com.example.xmlparsingrssfeedhttpurlconnections
 
-import com.example.xmlparsingrssfeedhttpurlconnections.model.RSS
 import retrofit2.Call
 import retrofit2.http.GET
 

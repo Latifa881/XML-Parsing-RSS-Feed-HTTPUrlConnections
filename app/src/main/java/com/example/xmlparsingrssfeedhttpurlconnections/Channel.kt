@@ -1,9 +1,7 @@
-package com.example.xmlparsingrssfeedhttpurlconnections.model.channel
+package com.example.xmlparsingrssfeedhttpurlconnections
 
-import com.example.xmlparsingrssfeedhttpurlconnections.model.channel.item.Item
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.ElementList
-import org.simpleframework.xml.Path
 import org.simpleframework.xml.Root
 import java.io.Serializable
 

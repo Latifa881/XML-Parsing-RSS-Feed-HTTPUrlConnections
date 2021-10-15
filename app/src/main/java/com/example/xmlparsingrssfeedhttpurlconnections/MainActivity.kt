@@ -1,6 +1,6 @@
 package com.example.xmlparsingrssfeedhttpurlconnections
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +9,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.xmlparsingrssfeedhttpurlconnections.model.RSS
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             .build()
         val rssAPI = retrofit.create(RSSAPI::class.java)
         call = rssAPI.rss
-        callApi(call!!)
+       callApi(call!!)
 
     }
 

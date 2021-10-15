@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:background="#acacac"
     android:orientation="vertical">
 
@@ -10,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="20dp"
-
         android:orientation="vertical">
 
 
@@ -93,7 +91,7 @@
                     android:text="However, if the text wraps to multiple lines, the text would still be flush left aligned inside the TextView. Adding the following attribute makes the actual text flush right aligned (ragged left) inside the TextView:summary d sad as d"
                     android:textSize="20dp"
                     android:visibility="visible" />
-=
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
