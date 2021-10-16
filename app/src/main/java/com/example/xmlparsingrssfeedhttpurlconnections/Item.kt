@@ -1,9 +1,7 @@
 package com.example.xmlparsingrssfeedhttpurlconnections
 
-import org.simpleframework.xml.Element
-import org.simpleframework.xml.Path
-import org.simpleframework.xml.Root
-import org.simpleframework.xml.Text
+
+import org.simpleframework.xml.*
 import java.io.Serializable
 
 @Root(name = "item", strict = false)
@@ -13,6 +11,9 @@ class Item @JvmOverloads constructor(
     var title: String? = null,
     @field:Element(name = "description")
     @param:Element(name = "description")
-    var description: String? = null
+    var description: String? = null,
+    @field:Element(name = "link")
+    @param:Element(name = "link")
+    var link: String? = null,
 
-): Serializable {}
+) : Serializable {}

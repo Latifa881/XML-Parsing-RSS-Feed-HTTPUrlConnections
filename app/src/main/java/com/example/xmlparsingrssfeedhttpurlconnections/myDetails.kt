@@ -4,9 +4,14 @@ class myDetails{
 
     var title: String?=null
     var description: String?=null
-    constructor( title:String?,description:String?){
+    var link:String?=null
+
+
+    constructor( title:String?,description:String?,link:String?){
         this.title=title
         this.description=description
+        this.link=link
+
     }
 
 }

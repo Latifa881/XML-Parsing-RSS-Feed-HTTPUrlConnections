@@ -3,6 +3,7 @@ package com.example.xmlparsingrssfeedhttpurlconnections
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             .addConverterFactory(SimpleXmlConverterFactory.create())
             .build()
         val rssAPI = retrofit.create(RSSAPI::class.java)
-        call = rssAPI.rss
+        call = rssAPI.rssFloreFlowers
        callApi(call!!)
 
     }
@@ -47,9 +48,10 @@ class MainActivity : AppCompatActivity() {
                 val items = response.body()!!.channels!!.items
                 for (item in items!!) {
                     //Toast.makeText(this@MainActivity,item.title,Toast.LENGTH_SHORT).show()
-                    var title=item.title.toString()
-                    var description=item.title.toString()
-                   details.add(myDetails(title,description))
+                    val title=item.title.toString()
+                    val description=(Html.fromHtml(Html.fromHtml(item.description.toString()).toString())).toString()
+                    val link=item.link.toString()
+                   details.add(myDetails(title,description,link))
                     rvMain.adapter!!.notifyDataSetChanged()
                 }
 
@@ -65,7 +67,6 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.main_menu, menu)
     return true}
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
 
         if(item.getItemId()==R.id.refresh){
             callApi(call!!)
